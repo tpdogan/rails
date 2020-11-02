@@ -1912,7 +1912,7 @@ following:
 </p>
 
 <h2>Comments</h2>
-<%= render @article.comments %>
+<%= render 'comments/comment', collection: @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= form_with model: [ @article, @article.comments.build ], local: true do |form| %>
@@ -1974,7 +1974,7 @@ Then you make the `app/views/articles/show.html.erb` look like the following:
 </p>
 
 <h2>Comments</h2>
-<%= render @article.comments %>
+<%= render 'comments/comment', collection: @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
